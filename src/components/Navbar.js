@@ -7,13 +7,12 @@ function Navbar() {
     justifyContent: 'center',
     alignItems: 'center',
     height: '60px',
-    backgroundColor: '#49274A'
+    backgroundColor: '#355C7D'
 };
 
 const linkStyle = {
     font: "Helvetica, sans-serif",
-    fontSize: '50px',
-    color: '#f4decb',
+    color: '#fff',
     margin: '0 10px',
     textDecoration: 'none',
     fontSize: '16px'

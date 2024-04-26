@@ -10,6 +10,8 @@ root.render(
     <App />
   </React.StrictMode>
 );
+// Apply background color to the entire webpage
+document.documentElement.style.backgroundColor = '#000'; // black
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
