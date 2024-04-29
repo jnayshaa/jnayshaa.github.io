@@ -1,22 +1,54 @@
-import React from 'react';
-// import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 function Home(){
 
     const homeStyle = {
-        // display: 'flex',
-        font: 'Helvetica, sans-serif',
-        marginTop: '100px',
-        marginLeft: '60px',
+        display: 'flex',
+        font: "Oxygen, sans-serif",
+        // marginLeft: '60px',
         justifyContent: 'center',
         alignItems: 'center',
         color: '#fff',
     };
 
+    const rotatingTexts = ["student", "developer", "designer", "creator"];
+    const [currentText, setCurrentText] = useState(rotatingTexts[0]);
+    const [displayedText, setDisplayedText] = useState('');
+    const [index, setIndex] = useState(0);
+  
+    useEffect(() => {
+      const changeText = () => {
+        if (index < rotatingTexts.length) {
+          setCurrentText(rotatingTexts[index]);
+          setDisplayedText('');
+        }
+      };
+  
+      changeText();
+  
+      const intervalId = setInterval(() => {
+        setIndex(prevIndex => (prevIndex + 1) % rotatingTexts.length);
+      }, 3000); // Change text every 10 seconds
+  
+      return () => clearInterval(intervalId);
+    }, [index]);
+  
+    useEffect(() => {
+      let charIndex = 0;
+      const typeEffect = setInterval(() => {
+        setDisplayedText(currentText.slice(0, charIndex));
+        charIndex++;
+        if (charIndex > currentText.length) clearInterval(typeEffect);
+      }, 150); // Typing speed in milliseconds
+  
+      return () => clearInterval(typeEffect);
+    }, [currentText]);
+
+
     return (
         <div>
-            <p style={{ ...homeStyle, fontSize: '100px' }}>Hello!</p>
-            <p style={{ ...homeStyle, fontSize: '50px' }}>Click on the links above to learn more about me.</p>
+            <p style={{ ...homeStyle, fontSize: '200px', marginTop: '200px'}}>Hello!</p>
+            <p style={{...homeStyle, fontSize: '50px', marginTop: '-200px'}}> I am a {displayedText}</p>
         </div>
     );
 };
