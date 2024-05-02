@@ -8,6 +8,7 @@ import Experience from './components/Experience';
 // import OtherInfo from './components/OtherInfo';
 import Contact from './components/Contact';
 
+
 function App() {
   return (
     <Router>

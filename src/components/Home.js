@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import '../Home.css';
 
 function Home(){
 
     const homeStyle = {
         display: 'flex',
         font: "Oxygen, sans-serif",
-        // marginLeft: '60px',
         justifyContent: 'center',
         alignItems: 'center',
         color: '#fff',

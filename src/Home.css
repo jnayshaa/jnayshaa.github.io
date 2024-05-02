@@ -1,0 +1,7 @@
+.home {
+    height: 100vh;           /* Full height */
+    background-image: url('./images/home_bg.png'); /* The image used */
+    background-size: cover;  /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
