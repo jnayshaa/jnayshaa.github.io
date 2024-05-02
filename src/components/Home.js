@@ -1,14 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import '../Home.css';
+import background from "../images/home_bg.png";
 
 function Home(){
 
+    const backgroundStyle = {
+      display: 'flex',
+      flexDirection: 'column', // Stack children vertically
+      justifyContent: 'center', // Center vertically
+      alignItems: 'center', // Center horizontally
+      height: '100vh', // Take full viewport height
+      width: '100%', // Take full viewport width
+      backgroundImage: `url(${background})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    };
+
     const homeStyle = {
-        display: 'flex',
-        font: "Oxygen, sans-serif",
-        justifyContent: 'center',
-        alignItems: 'center',
-        color: '#fff',
+      font: "Helvetica, sans-serif",
+      color: '#fff',
+      textAlign: 'center',
+      justifyContent: 'center',
+      margin: 0, // Remove default margins
+      padding: '5px 0' // Add minimal padding if needed for visual spacing
     };
 
     const rotatingTexts = ["student", "developer", "designer", "creator"];
@@ -28,7 +42,7 @@ function Home(){
   
       const intervalId = setInterval(() => {
         setIndex(prevIndex => (prevIndex + 1) % rotatingTexts.length);
-      }, 3000); // Change text every 10 seconds
+      }, 3000); // Change text every 3 seconds
   
       return () => clearInterval(intervalId);
     }, [index]);
@@ -46,9 +60,10 @@ function Home(){
 
 
     return (
-        <div>
-            <p style={{ ...homeStyle, fontSize: '200px', marginTop: '200px'}}>Hello!</p>
-            <p style={{...homeStyle, fontSize: '50px', marginTop: '-200px'}}> I am a {displayedText}</p>
+        <div style={backgroundStyle}>
+            <p style={{...homeStyle, fontSize: '30px', marginTop: '-300px'}}>Hello! I am </p>
+            <p style={{...homeStyle, fontSize: '100px'}}>Naysha Jain</p>
+            <p style={{...homeStyle, fontSize: '30px'}}> I am a {displayedText}</p>
         </div>
     );
 };

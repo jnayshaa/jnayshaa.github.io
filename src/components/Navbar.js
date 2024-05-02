@@ -7,7 +7,7 @@ function Navbar() {
     justifyContent: 'center',
     alignItems: 'center',
     height: '60px',
-    backgroundColor: '#355C7D'
+    backgroundColor: '#355C7D' //'#000' // black
 };
 
 const linkStyle = {
