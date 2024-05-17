@@ -12,14 +12,14 @@ import Contact from './components/Contact';
 function App() {
   return (
     <Router>
-      <div>
+      <div style={{ overflow: "scroll" }}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />
-          <Route path="/experience" element={Experience} />
+          <Route path="/experience" element={<Experience/>} />
           {/* <Route path="/other-info" element={OtherInfo} /> */}
-          <Route path="/contact" element={Contact} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
       </div>
     </Router>

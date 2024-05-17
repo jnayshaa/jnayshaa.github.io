@@ -1,0 +1,31 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #282c34;
+    color: #fff;
+    font-family: 'Helvetica, sans-serif';
+}
+
+.about-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-text {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.about-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+}
