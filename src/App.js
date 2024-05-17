@@ -1,28 +1,34 @@
-// import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Experience from './components/Experience';
-// import OtherInfo from './components/OtherInfo';
 import Contact from './components/Contact';
 
-
 function App() {
+  const appStyle = {
+    fontFamily: 'Helvetica, sans-serif',
+    color: '#fff',
+    textAlign: 'center',
+  };
+
   return (
-    <Router>
-      <div style={{ overflow: "scroll" }}>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/experience" element={<Experience/>} />
-          {/* <Route path="/other-info" element={OtherInfo} /> */}
-          <Route path="/contact" element={<Contact/>} />
-        </Routes>
+    <div style={appStyle}>
+      <Navbar />
+      <div id="home" style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Home />
       </div>
-    </Router>
+      <div id="about" style={{ paddingTop: '100px', minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#111' }}>
+        <About />
+      </div>
+      <div id="experience" style={{ paddingTop: '100px', minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#222' }}>
+        <Experience />
+      </div>
+      <div id="contact" style={{ paddingTop: '100px', minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#333' }}>
+        <Contact />
+      </div>
+    </div>
   );
 }
 
