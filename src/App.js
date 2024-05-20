@@ -16,9 +16,9 @@ function App() {
   };
 
   const footerStyle = {
-    backgroundColor: '#000', // Updated to black
+    backgroundColor: '##22272B', // Updated to black
     color: '#fff',
-    padding: '50px',
+    padding: '20px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',

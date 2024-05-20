@@ -37,7 +37,7 @@ function Contact() {
     return (
         <div style={backgroundStyle}>
             <div style={textContainerStyle}>
-                <p style={{ ...textStyle, fontSize: '50px' }}>I'd love to connect with you!</p>
+                <p style={{ ...textStyle, fontSize: '40px' }}>I'd love to connect with you!</p>
                 <p style={{ ...textStyle, fontSize: '30px' }}>Email: njain@knox.edu</p>
                 <a href="https://www.linkedin.com/in/naysha-jain-130421207/" style={{ ...textStyle, fontSize: '30px', color: '#fff' }}>LinkedIn</a>
                 <a href="https://github.com/jnayshaa/" style={{ ...textStyle, fontSize: '30px', color: '#fff' }}>GitHub</a>
