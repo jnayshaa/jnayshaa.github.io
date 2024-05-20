@@ -8,7 +8,7 @@ const navbarStyle = {
   justifyContent: 'center',
   alignItems: 'center',
   height: '60px',
-  backgroundColor: '#355C7D' //'#000' // black
+  backgroundColor: 'black' //'#355C7D' //'#000' // black
 };
 
 const linkStyle = {
