@@ -2,7 +2,7 @@ import React from 'react';
 
 const Experience = () => {
     // URL to the resume file stored in your GitHub repository
-    const resumeUrl = "https://github.com/yourusername/your-repository-name/raw/main/path-to-your-resume/resume.pdf";
+    const resumeUrl = "https://github.com/jnayshaa/resume/blob/main/src/Naysha%20Jain%20Resume.pdf";
 
     return (
         <div>

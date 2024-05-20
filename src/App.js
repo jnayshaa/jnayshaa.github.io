@@ -10,6 +10,7 @@ function App() {
   const appStyle = {
     fontFamily: 'Helvetica, sans-serif',
     color: '#fff',
+    backgroundColor: '#000',
     textAlign: 'center',
     paddingBottom: '60px', // Add padding at the bottom to account for footer
   };
