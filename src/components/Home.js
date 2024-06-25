@@ -2,37 +2,6 @@ import React, { useState, useEffect } from 'react';
 import background from "../images/home_bg.png";
 
 function Home() {
-
-    const backgroundStyle = {
-        display: 'flex',
-        justifyContent: 'flex-end', // Move the text container to the right half
-        alignItems: 'center', // Center vertically
-        minHeight: '100vh', // Take full viewport height
-        width: '100%', // Take full viewport width
-        backgroundImage: `url(${background})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        marginTop: '-100px'
-    };
-
-    const textContainerStyle = {
-        display: 'flex',
-        flexDirection: 'column', // Stack children vertically
-        justifyContent: 'center', // Center vertically
-        alignItems: 'flex-start', // Align text to the left within the container
-        width: '40%', // Take less than half the viewport width
-        textAlign: 'left', // Ensure text alignment is left
-        padding: '0 5%', // Add padding for spacing
-        color: '#fff',
-    };
-
-    const homeStyle = {
-        font: "Helvetica, sans-serif",
-        margin: 0, // Remove default margins
-        padding: '5px 0', // Add minimal padding if needed for visual spacing
-    };
-
     const rotatingTexts = ["a student", "a developer", "an astronomer", "a creator"];
     const [currentText, setCurrentText] = useState(rotatingTexts[0]);
     const [displayedText, setDisplayedText] = useState('');
@@ -67,12 +36,15 @@ function Home() {
     }, [currentText]);
 
     return (
-        <div style={backgroundStyle}>
-            <div style={textContainerStyle}>
-                {/* <p style={{ ...homeStyle, fontSize: '30px' }}>Hello! I am </p> */}
-                <p style={{ ...homeStyle, fontSize: '100px' }}>Naysha</p>
-                <p style={{ ...homeStyle, fontSize: '100px' }}>Jain</p>
-                <p style={{ ...homeStyle, fontSize: '30px' }}> I am {displayedText}</p>
+        <div 
+            className="flex justify-end items-center min-h-screen w-full bg-cover bg-center bg-no-repeat -mt-30"
+            style={{ backgroundImage: `url(${background})` }}
+        >
+            <div className="flex flex-col justify-center items-start w-1/2 text-left px-5 text-white">
+                <p className="font-sans m-0 p-1 text-3xl">Hello! I am </p>
+                <p className="font-sans m-0 p-1 text-9xl">Naysha</p>
+                <p className="font-sans m-0 p-1 text-9xl">Jain</p>
+                <p className="font-sans m-0 p-1 text-3xl">I am {displayedText}</p>
             </div>
         </div>
     );

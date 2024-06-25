@@ -7,29 +7,6 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 
 function App() {
-  const appStyle = {
-    fontFamily: 'Helvetica, sans-serif',
-    color: '#fff',
-    backgroundColor: '#000',
-    textAlign: 'center',
-    paddingBottom: '60px', // Add padding at the bottom to account for footer
-  };
-
-  const footerStyle = {
-    backgroundColor: '##22272B', // Updated to black
-    color: '#fff',
-    padding: '20px',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    position: 'fixed',
-    bottom: 0,
-    width: '100%',
-    maxWidth: '100vw', // Ensure the footer doesn't exceed the viewport width
-    transform: 'translateY(100%)', // Initially hide the footer
-    transition: 'transform 0.3s ease-in-out', // Add transition for smooth visibility
-  };
-
   // Show the footer when scrolled to the bottom
   window.onscroll = function() {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
@@ -40,25 +17,32 @@ function App() {
   };
 
   return (
-    <div style={appStyle}>
+    <div className="font-sans text-white bg-black text-center">
       <Navbar />
-      <div id="home" style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: '60px' }}>
+      <div id="home" className="h-screen flex items-center justify-center pt-16">
         <Home />
       </div>
-      <div id="about" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#111', paddingTop: '60px' }}>
+      <div id="about" className="min-h-screen flex flex-col items-center justify-center bg-gray-900 pt-16">
         <About />
       </div>
-      <div id="experience" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#222', paddingTop: '60px' }}>
+      <div id="experience" className="min-h-screen flex flex-col items-center justify-center bg-gray-900 pt-16">
         <Experience />
       </div>
-      <div id="contact" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#333', paddingTop: '60px' }}>
+      <div id="contact" className="min-h-screen flex flex-col items-center justify-center bg-gray-900 pt-16">
         <Contact />
       </div>
-      <footer id="footer" style={footerStyle}>
-        <span style={{ marginLeft: '40px' }}>Developed by Naysha Jain</span>
+      <footer
+        id="footer"
+        className="bg-gray-800 text-white p-5 flex justify-between items-center fixed bottom-0 w-full h-18 max-w-full transform translate-y-full transition-transform duration-300 ease-in-out"
+      >
+        <span className="ml-10">Developed by Naysha Jain</span>
         <div>
-          <a href="https://www.linkedin.com/in/nayshajain/" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', margin: '0 20px' }}>LinkedIn</a>
-          <a href="https://github.com/naysha-jain" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', marginRight: '100px' }}>GitHub</a>
+          <a href="https://www.linkedin.com/in/naysha-jain-130421207/" target="_blank" rel="noopener noreferrer" className="text-white mx-5 underline">
+            LinkedIn
+          </a>
+          <a href="https://github.com/jnayshaa" target="_blank" rel="noopener noreferrer" className="text-white mr-25 underline">
+            GitHub
+          </a>
         </div>
       </footer>
     </div>
