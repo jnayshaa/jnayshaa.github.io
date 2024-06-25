@@ -42,7 +42,7 @@ function Home() {
         >
             <div className="flex flex-col justify-center items-start w-1/2 text-left px-5 text-white">
                 <p className="font-sans m-0 p-1 text-3xl">Hello! I am </p>
-                <p className="font-sans m-0 p-1 text-9xl">Naysha</p>
+                <p className="font-montserrat m-0 p-1 text-9xl">Naysha</p>
                 <p className="font-sans m-0 p-1 text-9xl">Jain</p>
                 <p className="font-sans m-0 p-1 text-3xl">I am {displayedText}</p>
             </div>
