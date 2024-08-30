@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import background from "../images/home_bg.png";
+import Mbackground from "../images/profile.PNG";
 
 function Home() {
     const rotatingTexts = ["a student", "a developer", "an astronomer", "a creator"];
