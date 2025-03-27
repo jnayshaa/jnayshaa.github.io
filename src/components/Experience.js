@@ -4,7 +4,7 @@ import logo2 from "../images/seti.png";
 import logo3 from "../images/virufy.png";
 
 const Experience = () => {
-    const resumeUrl = "https://drive.google.com/file/d/1as_UaS-BxYCdXVbXsOyxMztLLrkg904n/view?usp=sharing";
+    const resumeUrl = "https://drive.google.com/file/d/1YwXg9t4LhMPNDkalFAOHKiKCEkEK1Jd_/view?usp=sharing";
 
     return (
         <div className="min-h-screen bg-[#15101D] flex flex-col justify-center items-center p-8 w-full bg-no-repeat -mt-20">
